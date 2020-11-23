@@ -8,12 +8,11 @@ module.exports = {
         let heroe = heroes.filter(heroe => {
             return heroe.id == req.params.id
         });
-        console.log(heroe);
-        if(heroe[0] == undefined){
-        res.send(​"No encontramos un héroe para mostrarte su biografía"​);
-        }else{
+         if(heroe[0] == undefined){
+         res.send('hola')
+         }else{
         res.send(​`Hola, mi nombre es ${heroe[0].nombre} y soy  ${heroe[0].profesion}`);
-        }
+         }
     },
     bio : (req,res) => {
         let heroe = heroes.filter(heroe => {
